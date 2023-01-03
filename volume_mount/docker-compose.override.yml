@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  scheduler:
+    volumes:
+      - &volume /home/odaneau/GIT/LEARNING/astro-sandbox/volume_mount/dags_2:/usr/local/airflow/dags/dags2
+  webserver:
+    volumes:
+      - *volume
+  triggerer:
+    volumes:
+      - *volume
